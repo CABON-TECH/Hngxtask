@@ -2,7 +2,7 @@ const router = require('express').Router()
 const moment = require('moment')
 
 
-router.get('/api', (req,res) => {
+router.get('/', (req,res) => {
     const {slack_name, track} = req.query 
     if(!slack_name || !track) {
         return res.status(422).json({message:"Missing query/queries"})
